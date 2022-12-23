@@ -41,28 +41,32 @@ const UpdateWithNames = () => {
 
 const ReRollReciever = () => {
     if (firstPick || picks >= 0) {
-        let num = currentChooser;
-        while (num === currentChooser) {
-          num = RandomNum(names);
-        }
-        if(!firstPick){
-            let rerollBtn = $('#ReRollButton')[0];
-            let rerollBtnText = rerollBtn.innerText;
-            if(rerollBtnText.endsWith(')')){
-                rerollBtn.innerText = rerollBtnText.substring(0, rerollBtnText.length - 3);
-            }
-            rerollBtn.innerText += `(${picks})`;
-    
-        }
-        $('#NameSection').empty();
-        $("#NameSection").append(`<p>${names[num]}</p>`);
-        $("#ReRollButton").delay(1000).fadeIn(250);
-        $("#LockInPick").delay(1000).fadeIn(250);
-        console.log(names[num]);
-      }
-    
       if (!firstPick && picks >= 0) picks -= 1;
-      firstPick = false;
+      let num = currentChooser;
+      while (num === currentChooser) {
+        num = RandomNum(names);
+      }
+
+      let rerollBtn = $('#ReRollButton')[0];
+      let rerollBtnText = rerollBtn.innerText;
+      if(rerollBtnText.endsWith(')')){
+        rerollBtn.innerText = rerollBtnText.substring(0, rerollBtnText.length - 3);
+      }
+      rerollBtn.innerText += `(${picks})`;
+      $('#NameSection').empty();
+      $("#NameSection").append(`<p>${names[num]}</p>`);
+      if(picks > 0 && !$('#ReRollButton').is(':visible')) {
+        $("#ReRollButton").delay(1000).fadeIn(250);
+      }
+      $("#LockInPick").delay(1000).fadeIn(250);
+      
+      console.log(picks);
+      if(picks <= 0){
+        $('#ReRollButton').hide();
+      }
+    }
+    
+    firstPick = false;
 }
 
 $("#name").keypress((e) => {
