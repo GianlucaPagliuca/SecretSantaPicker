@@ -1,0 +1,85 @@
+body {
+    background-color: red;
+    color: white;
+    padding-bottom: 60px;
+  }
+  
+  #ReRollButton {
+    all: unset;
+    text-decoration: underline;
+    color: #3c4930;
+    cursor: pointer;
+  }
+  
+  a:visited,
+  a:hover {
+    color: #253322cc;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+  }
+  #FooterText {
+    text-align: center;
+    font-size: 10pt;
+  }
+  
+  #NamePhase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #NameGeneratorPhase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #NameContainer {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: space-between;
+    margin-top: 2%;
+  }
+  
+  .Names {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .DeleteName {
+    padding: none !important;
+  }
+  
+  button {
+    padding: 5px 10px;
+    border-radius: 15px;
+    transition: all 250ms ease-out;
+    background-color: #3c4930;
+    color: white;
+    border: none;
+    box-shadow: 2px 2px 2px #3c4930cc;
+  }
+  
+  button:hover {
+    background-color: #253322;
+    box-shadow: 3px 3px 5px #253322cc;
+    color: white;
+  }
+  
+  input {
+    border-radius: 10px;
+    padding: 5px 10px;
+    border: none;
+  }
+  

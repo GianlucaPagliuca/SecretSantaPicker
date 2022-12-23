@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <title>Secret Santa Picker</title>
+  </head>
+  <body>
+    <header>
+      <h1>Time to pick secret santa!</h1>
+    </header>
+    <br />
+    <div id="NamePhase">
+      <div>
+        <input type="text" id="name" placeholder="Enter Name" />
+        <button id="submit">Submit</button>
+      </div>
+
+      <div id="NameContainer"></div>
+      <br />
+      <button id="LockNames">Lock in Names</button>
+    </div>
+
+    <div id="NameGeneratorPhase">
+      <h3 id="ChoosersName">Pass the laptop to</h3>
+      <button id="PickReciever">Generate Name</button>
+      <div id="NameSection"></div>
+      <div
+        style="
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-evenly;
+          width: 100%;
+        "
+      >
+        <button id="ReRollButton">Pick Another?</button>
+        <button id="LockInPick">Lock In</button>
+      </div>
+    </div>
+    <footer>
+      <p id="FooterText">Gianluca Pagliuca</p>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>
