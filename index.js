@@ -22,7 +22,7 @@ const UpdateWithNames = () => {
       `<div class="Names"><p style='display: inline-block;'>${name}</p><button class='DeleteName' data-nameindex='${i}'>Remove</button></div>`
     );
   });
-
+/* test */
   $(".DeleteName").click((e) => {
     let nameIndex = e.target.attributes["data-nameindex"].value;
     names.splice(nameIndex, 1);
